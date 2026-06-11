@@ -27,3 +27,18 @@ Introduce the students to some of the ARM architecture. Begin using the lab tool
 - Ultra-low power consumption with integrated sleep mode and an optional deep sleep mode.
 
 ---
+### Our Board - Nucleo-F103RB
+
+<table>
+  <tr>
+    <td>
+        <li>ARM 32 Bit Cortex-M3 Core</li>
+        <li>Contoller - STM32F103RB</li>
+        <li>72MHz Clock</li>
+        <li>128kB Flash</li>
+        <li>16kB SRAM</li>
+        <li>Documentation available on the GitHub site</li>
+    </td>
+    <td> <img src="res/Nucleo.png"  alt="Nucleo" width = 279px height = 336px ></td>
+  </tr>
+</table>
