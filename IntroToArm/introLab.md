@@ -7,7 +7,10 @@ author: Trevor Douglas
 ---
 
 # 🚀 Introduction to ARM  
-Introduce the students to some of the ARM architecture. Begin using the lab tools. The students will create a project and write an assembly program based on a simulated target.
+
+- Introduce the students to some of the ARM architecture. 
+- Begin using the lab tools. 
+- The students will create a project and write an assembly program based on a simulated target.
 👨‍💻 
 Trevor Douglas
 SSE Lab Instructor
