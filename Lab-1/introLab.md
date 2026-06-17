@@ -149,3 +149,43 @@ So when you read the PC:
 You are seeing the address of an instruction already in the pipeline, not the one currently executing.
 
 ---
+### Project Options
+<table>
+  <tr>
+    <td> <img src="res/ProjectOptions.png"  alt="Project Options" width = 520px height = 400px ></td>
+  </tr>
+</table>
+
+Notice that the ROM or Flash in our case is at 0x8000000 and the RAM is at 0x20000000.
+
+---
+### Application Program Status Register
+
+The APSR contains the current state of the condition flags from previous instruction executions. The bit assignments are:
+<table>
+  <tr>
+    <td> <img src="res/APSR.png"  alt="APSR" width = 610px height = 434px ></td>
+  </tr>
+</table>
+
+---
+### Example ARM Assembly instructions
+
+```assembly
+
+;How to copy a value or
+  MOV	Ry, #0x76         ; Move a 8 bit Hex number to low word of Ry
+  MOV	Ry, #0x7654       ; Move a 16 bit Hex number to low word of Ry
+  MOVT	Ry, #0x7654     ; Move a 16 bit Hex number to high word of Ry
+  MOV32	Ry, #0x76543210 ; Move the 32 bit Hex number to Ry
+  MOV   Rx, Ry          ; Move Ry to Rx							
+
+  ;Store Data. LDR allows to move 32 bits of data or from a memory location (More about that later)
+  LDR	Ry, = 0x76543210  ;Load Ry with the 32 bit Hex number 76543210
+
+  ;Arithmetic operations
+  ADD	Rx,Ry,Rz    ; Add contents of Ry and Rz, store result in Rx
+  ADDS	Rx,Ry,Rz  ; Same…but there is a difference. What is it?	
+
+  ;Branching (moving the PC)
+  B	label   		; Branch to  label
