@@ -6,7 +6,7 @@ title: Introduction to ARM
 author: Trevor Douglas
 ---
 
-# 🚀 Introduction to ARM  
+# 🚀 Lab 1 - Introduction to ARM  
 
 - Introduce the students to some of the ARM architecture. 
 - Begin using the lab tools. 
