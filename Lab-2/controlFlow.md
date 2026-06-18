@@ -94,3 +94,98 @@ The two operations applicable to all stacks are:
 </table>
 
 ---
+### Looping example
+
+```assembly
+
+  MOV  R0, #0    ;initialize R0 as our counter
+
+  ;Start of the loop
+Start
+  
+  ; Stuff you may want to do in your loop
+
+  
+  ADD   R0, #1      ; Increment the counter
+  CMP   R0, #16     ; How many times to loop
+  BNE    Start      ; Loop back if not done
+
+
+  ;What about checking R0 being zero or not zero using the Z flag:
+
+
+  CBZ	R0, loopZero
+  ;; or
+  CBNZ	R0, loopNotZero
+
+```
+
+---
+### Link Register R14 and Subroutines
+
+The link register is used to store the return program counter  when a subroutine or function is called.  To Branch (or call) a subroutine using the Branch and update Link Register.
+
+```assembly
+  BL function   ; Branch to a subroutine and place the return address in the Link Register.
+                ; The Link Register will contain the address of the code after the Branch
+                ; instruction.
+
+
+
+function        ; This is the label or name of the subroutine.
+
+  BX LR         ; Branch back to the Link Register address.
+```
+
+---
+### Another alternative to a subroutine call
+
+```assembly
+
+  ALIGN   ; Make sure we are on a 32 bit boundary
+
+Delay	PROC            ; Delay is the name of the subroutine
+  
+  push	{R1,LR}   	  ; Push R1 and LR onto the stack
+  MOV 	R1,#4         ; Initialize a counter
+
+delay_loop            ; This is a loop ... NOT a SUBROUTINE
+  
+  subs	R1, #1        ; Decrement the counter
+  bne	delay_loop
+  
+  pop	{R1,PC}	        ; I am dond, Pop off the stack into R1 and PC 
+                      ; (PC will get the LR)
+      
+  ENDP                ; End the procedure
+
+```
+---
+### My favorite way to call and write subroutines
+
+``` assembly
+
+  ; Setup any registers you want as inputs into the subroutine
+  ;Call the routine like this
+  BL  Delay
+
+  ; Put the name of the subroutine here
+  ; Indicate any inputs you are using
+  ALIGN
+
+Delay	PROC           ; Delay is the name of the subroutine.
+  
+  PUSH R1            ; I am using R1 so I should push it to the stack.  
+  MOV 	R1,#4
+
+delay_loop
+  SUBS	R1, #1
+  BNE	delay_loop
+  
+  POP R1
+  BX  LR	
+      
+  ENDP
+
+```
+---
