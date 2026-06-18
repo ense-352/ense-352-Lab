@@ -252,4 +252,24 @@ Remember that when you are looking at characters or a string, they are represent
 </table>
 
 ---
+### Memory Access Example
+So if we wanted to check if a certain character was in a register
+
+``` assembly
+  CMP		R1, #’a’
+  BEQ 		vowelDetected
+
+```
+And
+
+``` assembly
+
+  CMP		R1, #0x61
+  BEQ		vowelDetected
+
+```
+
+Are equivalent.
+
+---
 
