@@ -189,3 +189,67 @@ delay_loop
 
 ```
 ---
+
+### Creating C Strings
+
+This type of format will construct a C string and null terminate.  This means you can tell when the string ends.
+
+``` assembly
+
+String1                         ; This is the label of the string in memory.
+  DCB	"ENSE 352 is fun!!!“,0    ; Dedicate some data nad NULL terminate.
+
+```
+
+Place this String Directive somewhere in your code that your PC will not address. In order to  access this string we can load the memory address where it is stored like so:
+
+``` assembly
+  LDR		R0, = String1   ;R0 now contains the address for the string
+
+```
+---
+### Memory Access Instructions
+
+_op{type}{cond} Rt, [Rn {, #offset}]_ ; Immediate offset
+
+- ‘op’ is either LDR (load register) or STR (store register)
+- ‘type’ is one of the following:
+- B: Unsigned byte, zero extends to 32 bits on loads
+- SB: Signed byte, sign extends to 32 bits (LDR only)
+- H: Unsigned halfword, zero extends to 32 bits on loads
+- SH: Signed halfword, sign extends to 32 bits (LDR only)
+- ‘cond’ is an optional condition code (see Conditional execution on page 58)
+- ‘Rt’ is the register to load or store
+- ‘Rn’ is the register on which the memory address is based‘offset’ is an offset from Rn. If offset is omitted, the address is the contents of Rn
+
+---
+### Memory Access Example
+
+How to transfer on byte of data from memory into a register.
+
+``` assembly 
+String1
+  DCB	"ENSE 352 is fun!!!“,0   ;  This 0 indicates null terminate
+
+  ;In order to  access this string we can load the memory address where it is stored like so:
+
+  LDR		R0, = String1
+
+  ;R0 now contains the address for the string
+
+  LDRB		R1,[R0]   ;This will load one byte of data ... An 'E' !
+
+```
+---
+### Ascii Code
+
+Remember that when you are looking at characters or a string, they are represented by ASCII Code. So an ‘a’ is represented by 97 decimal or hexadecimal 0x61.
+
+<table>
+  <tr>
+    <td> <img src="res/AsciiTable.png"  alt="Ascii" width = 508px height = 451px ></td>
+  </tr>
+</table>
+
+---
+
