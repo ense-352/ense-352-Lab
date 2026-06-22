@@ -52,7 +52,7 @@ Mkfile.old
 dkms.conf
 
 # Documentation
-*.pdf
+
 
 # Mac stuff
 .DS_Store
