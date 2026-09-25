@@ -2,9 +2,6 @@
 
 ## Procedure
 
-### Accept the assignment
-On URCourses you will find a link to a GitHub classroom assignment.  Accept this assignemnt and make sure you select your User ID from the list provided so you submit under your username.  You must accept this assignment on your assigned lab day.
-
 ### Creation of a new Project
 We are going to create a project based on a simulated target. This means that we will not need our evaluation board at this time. Our ARM core will be simulated. It is even possible to simulate peripherals in some cases.
 
