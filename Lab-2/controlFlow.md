@@ -9,8 +9,8 @@ author: Trevor Douglas
 # 🚀 Lab 2 - Control Flow Statements  
 
 The objective of this lab is to introduce the students to ARM assembly using control flow statements and instructions.
-  
-👨‍💻 
+
+👨
 Trevor Douglas
 SSE Lab Instructor
 
