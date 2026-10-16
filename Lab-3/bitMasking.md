@@ -88,5 +88,5 @@ Result: bit 1 is forced to **1** while all other bits remain unchanged.
 LDR R3, =0xFFFFFFFE  ;Load the mask value
 AND R2, R0, R3
 ```
----
+
 
