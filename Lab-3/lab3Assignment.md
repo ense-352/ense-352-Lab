@@ -17,15 +17,15 @@ What happens if we are in a subroutine and need to call another subroutine whith
 Accept your assignment, create a new project and put the project under revision control.
 
 ### Phase 1
-Write a subroutine that supports the following features.
+Write a subroutine named phase1 that calls the following three nested subroutines:
 - Create a nested subroutine that uses R0 as the input and R1 as the register that will contain the return information (the answer). The function of the subroutine is to determine if bit 11 is a 1 or a 0.  R1 will contain the answer (1 for true and 0 for false).
 - Create a nested subroutine that uses R0 as the input.  This subroutine will be responsible for setting bit 3 and clearing bit 7.  All other bits shall be left undisturbed.
 - Create a nested subroutine that uses R0 as the input register and R1 as the register that will contain the return information (the answer).  The function of the subroutine shall be to count the number of 1's that are resident in R0 (the input).  Count the 1's and put the answer in R1.
 
 
 ### Phase 2
-Write a subroutine that meets the following requirements:
-- rot_left_right1 that takes a general purpose register as an input.
+Write a subroutine named rot_left_right that meets the following requirements:
+- rot_left_right that takes a general purpose register as an input.
 - Rotates Left or Right the lower 16 bits(without touching the upper 16 bits). 
 - The amount to rotate is given in a second  input register, bits 3:0.
 - The direction to rotate is given in bit 5 of this second input register.  {1} means rotate left, {0} means rotate right. 
