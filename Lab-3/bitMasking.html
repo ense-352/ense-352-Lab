@@ -52,11 +52,12 @@ SSE Lab Instructor</p>
 <span class="hljs-keyword">BEQ</span> bitIsSet       <span class="hljs-comment">;If true then that bit is set</span>
 
 <span class="hljs-comment">;; if it is not equal the above statement will fail and will fall to this spot.</span>
-
-<span class="hljs-comment">;; Somewhere later in the code</span>
-<span class="hljs-symbol">bitIsSet:</span>
-
 </code></pre>
+<table>
+  <tr>
+    <td> <img src="res/booleanAnd.png" alt="Boolean AND" width="670px" height="350px" /></td>
+  </tr>
+</table>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-theme="default" lang="C" data-marpit-pagination="6" style="--paginate:true;--theme:default;" data-marpit-pagination-total="7">
 <h2 id="isolating-bits-setting-a-bit">Isolating Bits (Setting a Bit)</h2>
@@ -64,14 +65,18 @@ SSE Lab Instructor</p>
 <li>Set a bit without affecting the other bits.</li>
 <li>Use the <strong>ORR</strong> instruction.</li>
 </ul>
-<h2 id="example-set-bit-1-in-r0">Example: Set bit 1 in R0</h2>
+<h4 id="example-set-bit-1-in-r0">Example: Set bit 1 in R0</h4>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-armasm"><span class="hljs-keyword">ORR</span> <span class="hljs-built_in">R0</span>, <span class="hljs-built_in">R0</span>, <span class="hljs-number">#0x2</span>
 </code></pre>
-<p>Result: bit 1 is forced to <strong>1</strong> while all other bits remain unchanged.</p>
+<table>
+  <tr>
+    <td> <img src="res/booleanOr.png" alt="Boolean OR" width="550px" height="280px" /></td>
+  </tr>
+</table>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-theme="default" lang="C" data-marpit-pagination="7" style="--paginate:true;--theme:default;" data-marpit-pagination-total="7">
 <h2 id="tip---if-you-need-to-mask-with-a-value-larger-than-8-bits-use-a-register">Tip -  If you need to mask with a value larger than 8 bits, use a register:</h2>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-armasm"><span class="hljs-keyword">LDR</span> <span class="hljs-built_in">R3</span>, <span class="hljs-number">=0xFFFFFFFE</span>  <span class="hljs-comment">;Load the mask value</span>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-armasm"><span class="hljs-keyword">LDR</span> <span class="hljs-built_in">R3</span>, <span class="hljs-number">=0x00000002</span>  <span class="hljs-comment">;Load the mask value</span>
 <span class="hljs-keyword">AND</span> <span class="hljs-built_in">R2</span>, <span class="hljs-built_in">R0</span>, <span class="hljs-built_in">R3</span>
 </code></pre>
 </section>

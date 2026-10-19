@@ -60,11 +60,13 @@ CMP R2, #0x2.      ;Compare the register
 BEQ bitIsSet       ;If true then that bit is set
 
 ;; if it is not equal the above statement will fail and will fall to this spot.
-
-;; Somewhere later in the code
-bitIsSet:
-
 ```
+<table>
+  <tr>
+    <td> <img src="res/booleanAnd.png"  alt="Boolean AND" width = 670px height = 350px ></td>
+  </tr>
+</table>
+
 
 ---
 ## Isolating Bits (Setting a Bit)
@@ -72,21 +74,23 @@ bitIsSet:
 - Set a bit without affecting the other bits.
 - Use the **ORR** instruction.
 
-## Example: Set bit 1 in R0
+#### Example: Set bit 1 in R0
 
 ```armasm
 ORR R0, R0, #0x2
 ```
-
-Result: bit 1 is forced to **1** while all other bits remain unchanged.
+<table>
+  <tr>
+    <td> <img src="res/booleanOr.png"  alt="Boolean OR" width = 550px height = 280px ></td>
+  </tr>
+</table>
 
 ---
 
 ## Tip -  If you need to mask with a value larger than 8 bits, use a register:
 
 ```armasm
-LDR R3, =0xFFFFFFFE  ;Load the mask value
+LDR R3, =0x00000002  ;Load the mask value
 AND R2, R0, R3
 ```
-
 
