@@ -51,7 +51,7 @@ Notice from the above schematic that the Green LED is located on PA 5.  Look at 
 
 Peripheral Addresses are given a Boundary Address and an offset. This allows peripherals to be moved to different Boundary locations and their documentation and code templates do not have to change that often.
 
-From our STM32F10xxRefMaual-2.pdf documentation:
+From our reference manual documentation:
 
 ---
 <table>
