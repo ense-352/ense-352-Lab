@@ -135,7 +135,7 @@ So, now we have some information.  We know:
 ### Port pins - What do we need to do? 🧠
 The following slides describe the steps you need to do to configure your I/O lines and how to change outputs and read inputs:
 
-Earlier in the semester we discussed one of the benefits of the ARM architecture and the STM32F103B microcontroller is the ability to dynamically control power to the peripherals.  To use these I/O lines you will need to first turn on the clocks for PORT A and PORT C.  Investigate the  APB2 peripheral clock enable register (RCC__APB2ENR)  in the Reference Manual RM0008-rev21.pdf to do this. 
+Earlier in the semester we discussed one of the benefits of the ARM architecture and the STM32F103B microcontroller is the ability to dynamically control power to the peripherals.  To use these I/O lines you will need to first turn on the clocks for PORT A and PORT C.  Investigate the  APB2 peripheral clock enable register (RCC__APB2ENR)  in the Reference Manual to do this. 
 
 ---
 
