@@ -28,4 +28,4 @@ Last week you configured the onboard button to control the onboard LED. Repeat t
 If you have not done so already, use the parts from your electronics course to build the circuit from the schematic provided on URCourses. There is also a video for your resource on URCourses.
 
 ### Phase 3
-Once the circuit is built, write the code such that each button will control a corresponding LED like a light switch.
+Once the circuit is built, write the code such that each button will control a corresponding LED.  For example push one of the buttons and the LED will stay on until you stop pushing the button.
