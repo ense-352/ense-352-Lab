@@ -9,7 +9,7 @@
 
 ## Objective
 
-The objective of this lab is to introduce the students to building a C project and interface to buttons and switches from their 384 hardware build (bread board).
+The objective of this lab is to introduce the students to building a C project and interface to buttons and LED's  from their 384 hardware build (bread board).
 
 ## Background
 
@@ -25,7 +25,7 @@ Now that you are providing a clocking source to your I/O lines you must configur
 Last week you configured the onboard button to control the onboard LED. Repeat this but using a C project.
 
 ### Phase 2
-If you have not done so already, use the parts from your electronics course to build the circuit from the schematic provided on URCourses. There is also a video for your resource on URCourses.
+If you have not done so already, use the parts from your electronics course to build the circuit from the schematic provided on URCourses. There is also a video for your resoumarrce on URCourses.
 
 ### Phase 3
 Once the circuit is built, write the code such that each button will control a corresponding LED.  For example push one of the buttons and the LED will stay on until you stop pushing the button.
