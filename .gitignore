@@ -53,6 +53,11 @@ dkms.conf
 
 # Documentation
 
+# Markdown generation
+*.html
+*.jpeg
+*.pdf
+*.png
 
 # Mac stuff
 .DS_Store

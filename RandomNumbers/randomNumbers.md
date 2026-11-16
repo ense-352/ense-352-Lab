@@ -21,7 +21,7 @@ This means we need to generate a random number in order to create a random seque
 The ***rand()*** function that is part of the ***stdlib.h*** library will generate a ranodom number between 0 and RAND_MAX.  RAND_MAX is typically 2<sup>31</sup> -1 .  The ***rand()*** function is termed a pseudorandom number as it is predictable every time you run it.
 
 
-<details>
+<details open>
 <summary>expand rand.s</summary>
 
 in `rand.s`
@@ -41,7 +41,7 @@ int main(int argc, char **argv){
 ### Seed
 In order to not have a predictable pattern of random numbers you have to seed the generator using ***srand()***.  Now interesting enough you have to seed the generator with a different value every time you run your program or else ... you guessed it ... predictable.  So we need to come up with a way to seed the random number generator differently each time we run the program.
 
-<details>
+<details open>
 <summary>expand randomBetter.s</summary>
 
 in `randomBetter.s`
@@ -66,7 +66,7 @@ int main(int argc, char **argv){
 ```
 </details>
 
-So ***time()*** will give us some different value every time we run.  Another solution to this problem, expecially if you are writing Assembly, is to utilize the opening sequence of our game to return some random value.  To do this, increment a value while waiting for the user to press a button.
+So ***time()*** will give us some different value every time we run.  Another solution to this problem, expecially if you are using rand() in our game, is to utilize the opening sequence of our game to return some random value.  To do this, increment a value while waiting for the user to press a button.
 
 
 ### RAND_MAX
@@ -90,6 +90,7 @@ int randomNumberTo4()
     int limit;
     int r;
 
+    // Make limit a multiple of the NUMBER_OF_LEDS
     limit = RAND_MAX - (RAND_MAX % NUMBER_OF_LEDS);
 
     while((r = rand()) >= limit);
