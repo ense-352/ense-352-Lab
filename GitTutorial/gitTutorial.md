@@ -130,24 +130,13 @@ git pull origin main
 
 ---
 
-## 🧪 Branches
+## 🧪 Push Changes
 
 ```bash
-git checkout -b feature-xyz
+git push
 ```
 
 - Use branches to isolate changes
-
----
-
-## ✅ Merge Changes
-
-```bash
-git checkout main
-git merge feature-xyz
-```
-
-- Merges `feature-xyz` into `main`
 
 ---
 
@@ -159,6 +148,15 @@ git log
 ```
 
 - View current changes and history
+
+---
+
+## 🔍 Switch to previous version
+
+```bash
+git switch --detach <commit>  # Inspect the older version
+git switch -                 # Return to your previous branch
+```
 
 ---
 
